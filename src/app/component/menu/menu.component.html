@@ -1,0 +1,8 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>     <a ngbNavLink routerLink="/allFormat" routerLinkActive="active">Formations</a> </li>
+    <li ngbNavItem>     <a ngbNavLink routerLink="/createFormation" routerLinkActive="active">Create formations</a></li>
+    <li ngbNavItem>     <a ngbNavLink routerLink="/createSession" routerLinkActive="active">Create session</a></li>
+    <li ngbNavItem>     <a ngbNavLink routerLink="/login" routerLinkActive="active">Log me</a>  </li>
+    <li ngbNavItem *ngIf="iAmLogged == false">     <a ngbNavLink routerLink="/signup" routerLinkActive="active">sign up</a> </li>
+</ul>
+

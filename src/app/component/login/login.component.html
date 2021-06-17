@@ -1,0 +1,19 @@
+<h3>Log into the matrix</h3>
+
+<div>
+    <form [formGroup] = "loginForm" (ngSubmit) = "onSubmit()">
+        
+        <label for="email">LOGIN (your email)   </label>
+        <input type="email" id="email" formControlName = "email" class="formControl input-self"/>
+       <span *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">Entrez un email valide</span>
+        <br/>
+        
+        <label for="pass">PASSWORD  </label>
+        <input type="password" id="pass" formControlName = "pass" class="formControl input-self"/>
+        <span *ngIf="!loginForm.get('pass').valid && loginForm.get('pass').touched" class="help-block">Entrez un password</span>
+        <br/>
+
+        <button class="btn btn-primary btn-self" type="submit">LOG ME</button>
+        <button class="btn btn-primary btn-self" type="button" (click)="logout()">LOGOUT</button>
+    </form>
+</div>

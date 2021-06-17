@@ -1,0 +1,30 @@
+<div>
+    <form [formGroup] = "">
+        <label for="startDate">start date   </label>
+        <input type="date" id="startDate" formControlName = "startDate" class="formControl input-self"/>
+        <br/>
+
+        <label for="endDate">end date   </label>
+        <input type="date" id="endDate" formControlName = "endDate" class="formControl input-self"/>
+        <br/>
+
+        <label for="idFormateur">Formateur   </label>
+        <input type="number" id="idFormateur" formControlName = "idFormateur" class="formControl input-self"/>
+        <br/>
+
+        <label for="idLocal">Local   </label>
+        <input type="number" id="idLocal" formControlName = "idLocal" class="formControl input-self"/>
+        <br/>
+        
+        <label for="idFormation">Formation   </label>
+        <input type="number" id="idFormation" formControlName = "idFormation" class="formControl input-self"/>
+        <br/>
+
+        <button class="btn btn-primary btn-self" type="submit">Create formation</button>
+    </form>
+</div>
+<br/><br/><br/>
+<select formControlName="allFormat" class="form-control"> <!--(change)="changeCity($event)" formControlName="cityName"-->
+    <option value="" disabled>Choose your city</option>
+    <option *ngFor="let f of allForm">{{f}}</option>
+ </select>

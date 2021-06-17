@@ -1,0 +1,25 @@
+<div>
+    <form [formGroup] = "createFormatForm" (ngSubmit) = "onSubmit()">
+        <label for="intitule">Intitulé   </label>
+        <input type="text" id="intitule" formControlName = "intitule" class="formControl input-self"/>
+        <br/>
+
+        <label for="duree">Durée   </label>
+        <input type="number" id="duree" formControlName = "duree" class="formControl input-self"/>
+        <br/>
+
+        <label for="prix">Prix   </label>
+        <input type="number" id="prix" formControlName = "prix" class="formControl input-self"/>
+        <br/>
+
+        <label for="maxInscription">Maximum inscription   </label>
+        <input type="number" id="maxInscription" formControlName = "maxInscription" class="formControl input-self"/>
+        <br/>
+
+        <label for="minEleve">Minimum eleve   </label>
+        <input type="number" id="minEleve" formControlName = "minEleve" class="formControl input-self"/>
+        <br/>
+
+        <button class="btn btn-primary btn-self" type="submit">Create formation</button>
+    </form>
+</div>
