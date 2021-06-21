@@ -1,5 +1,5 @@
 <div>
-    <form [formGroup] = "">
+    <form [formGroup] = "createSessionForm" (ngSubmit) = "onSubmit()">
         <label for="startDate">start date   </label>
         <input type="date" id="startDate" formControlName = "startDate" class="formControl input-self"/>
         <br/>
@@ -9,22 +9,32 @@
         <br/>
 
         <label for="idFormateur">Formateur   </label>
-        <input type="number" id="idFormateur" formControlName = "idFormateur" class="formControl input-self"/>
+        <select id="idFormateur" formControlName="formateurs" class="formControl input-self">
+            <option selected disabled>select a formateur</option>
+            <option *ngFor="let formateur of allFormateur" [ngValue] = "formateur">{{formateur.nom}}</option>
+        </select>
         <br/>
 
         <label for="idLocal">Local   </label>
-        <input type="number" id="idLocal" formControlName = "idLocal" class="formControl input-self"/>
+        <select id="idLocal" formControlName="locaux" class="formControl input-self">
+            <option selected disabled>select a local</option>
+            <option *ngFor="let lo of allLocaux" [ngValue] = "lo">{{lo.nom}}</option>
+        </select>
+
         <br/>
         
         <label for="idFormation">Formation   </label>
-        <input type="number" id="idFormation" formControlName = "idFormation" class="formControl input-self"/>
+        <select id="idFormation" formControlName="formats" class="formControl input-self">
+            <option selected disabled>select a formation</option>
+            <option *ngFor="let fo of allForm" [ngValue] = "fo">{{fo.intitule}}</option>
+        </select>
+
+        <br/>
+        <br/>
         <br/>
 
-        <button class="btn btn-primary btn-self" type="submit">Create formation</button>
+        <button class="btn btn-primary btn-self" type="submit" >Create session</button>
     </form>
 </div>
 <br/><br/><br/>
-<select formControlName="allFormat" class="form-control"> <!--(change)="changeCity($event)" formControlName="cityName"-->
-    <option value="" disabled>Choose your city</option>
-    <option *ngFor="let f of allForm">{{f}}</option>
- </select>
+

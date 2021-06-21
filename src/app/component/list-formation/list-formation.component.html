@@ -1,3 +1,5 @@
+
+
 <ul>
     <li *ngFor="let f of data" >
         <a [routerLink]="['/allFormat', f.idFormation]" >{{f.intitule}}</a>  
@@ -6,3 +8,8 @@
 </ul>
 
 
+<form [formGroup]="dateForm" (ngSubmit)="onSubmit()">
+    <label for="byDate">Search by date</label>
+    <input id="byDate" type="date" formControlName="dateToSearch"/>
+    <button type="submit" (click)="searchByDate()">Search</button>
+</form>

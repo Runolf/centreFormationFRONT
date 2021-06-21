@@ -37,4 +37,6 @@ export class SessionsService {
     console.log(body);
     return this.http.post(`${this.sessionURL}/sessions`, body);
   }
+
+  
 }
