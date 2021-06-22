@@ -18,6 +18,7 @@ export class ListFormationComponent implements OnInit {
   oneFormation: any;
   dateForm: FormGroup;
   toSearch: any;
+  
   ngOnChanges(): void{
     console.log("ngOnChanges done");
     this.toSearch = this.data.find(x => console.log(x));
@@ -29,6 +30,7 @@ export class ListFormationComponent implements OnInit {
         "dateToSearch" :  new FormControl(null, Validators.required)
       }
     );
+    
     this.LFS.getAllFormation().subscribe((response) => {
       console.log("response:");
       console.log(response);

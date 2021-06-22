@@ -3,6 +3,7 @@
 <ul>
     <li *ngFor="let f of data" >
         <a [routerLink]="['/allFormat', f.idFormation]" >{{f.intitule}}</a>  
+        
         <div *ngIf="f.intitule == null">Is null</div>
     </li>
 </ul>

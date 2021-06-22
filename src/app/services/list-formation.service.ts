@@ -16,7 +16,7 @@ export class ListFormationService {
   }
 
   getOneFormation(id){
-    return this.http.get(`${this.formationURL}/allFormations/`+id); // php formation
+    return this.http.get(`${this.formationURL}/allFormations/`+id);
   }
 
   createFormation(intitule: string, duree: number, prix: number, maxInscription: number, minEleve: number){

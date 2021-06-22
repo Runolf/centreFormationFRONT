@@ -8,6 +8,7 @@ import { OneFormatComponent } from './component/one-format/one-format.component'
 import { SignupComponent } from './component/signup/signup.component';
 
 const routes: Routes = [
+  {path: "", component: ListFormationComponent},
   {path : "login", component: LoginComponent},
   {path : "allFormat", component: ListFormationComponent},
   {path: "signup", component: SignupComponent},

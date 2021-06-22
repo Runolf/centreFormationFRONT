@@ -21,7 +21,6 @@ export class OneFormatComponent implements OnInit {
     this.data = this.activatedRoute.paramMap.subscribe(params => {
       console.log(params);
       this.id = params.get("id");
-   //   console.log(this.formation);  
     });
 
     this.formatService.getOneFormation(this.id).subscribe(response => {
